@@ -1,0 +1,21 @@
+{
+  "name": "imovies",
+  "version": "1.0.0",
+  "description": "Full-Stack Cinema Management and Online Ticket Booking System",
+  "private": true,
+  "scripts": {
+    "install:all": "pnpm install && cd server && pnpm install && cd ../client && pnpm install",
+    "seed": "cd server && node seed.js",
+    "server": "cd server && node server.js",
+    "server:dev": "cd server && node --watch server.js",
+    "client": "cd client && pnpm dev",
+    "dev": "concurrently \"pnpm run server:dev\" \"pnpm run client\"",
+    "test": "cd server && pnpm test"
+  },
+  "keywords": ["cinema", "movie-booking", "mern", "express", "react", "mongodb", "socket.io"],
+  "author": "iMovies Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
